@@ -3,80 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rétrospective 2025</title>
+  <title>Site Responsive avec Image</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #121212;
-      color: #f0f0f0;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    header {
-      background-color: #1f1f1f;
-      padding: 2rem;
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      background-image: url('https://picsum.photos/1920/1080');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      color: white;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .hero h1 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 12px;
     }
 
-    .timeline {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+        padding: 1rem;
+      }
     }
 
-    .event {
-      background-color: #1e1e1e;
-      border-left: 4px solid #00bcd4;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-    }
-
-    .event h2 {
-      margin-top: 0;
-      color: #00bcd4;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #888;
+    @media screen and (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Ma Rétrospective 2025</h1>
-    <p>Un regard sur les meilleurs moments de l'année</p>
-  </header>
 
-  <div class="timeline">
-    <div class="event">
-      <h2>Janvier</h2>
-      <p>Début d’un nouveau projet passionnant ! 🎯</p>
-    </div>
-    <div class="event">
-      <h2>Mars</h2>
-      <p>Premier gros succès, on a dépassé les 1000 utilisateurs actifs 🚀</p>
-    </div>
-    <div class="event">
-      <h2>Juillet</h2>
-      <p>Vacances bien méritées au bord de la mer 🏖️</p>
-    </div>
-    <div class="event">
-      <h2>Octobre</h2>
-      <p>Lancement de notre serveur Discord communautaire 💬</p>
-    </div>
+  <div class="hero">
+    <h1>Bienvenue sur mon site responsive</h1>
   </div>
 
-  <footer>
-    © 2025 - Fait avec ❤️ pour revivre les bons moments
-  </footer>
 </body>
 </html>
